@@ -1,0 +1,41 @@
+<!-- Wappler include head-page="layouts/cover" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="BlogWriting" appConnect="local" components="{dmxMasonry:{},dmxStripe:{},dmxDatastore:{}}" -->
+<dmx-datastore id="datastore1"></dmx-datastore>
+<dmx-json-datasource id="jsonDS1" is="dmx-serverconnect" url="/samplejson/MOCK_DATA%20(5).json"></dmx-json-datasource>
+<meta name="ac:route" content="/BlogWriting">
+<dmx-stripe id="stripe1" key="pk_test_51P3vdjSFH1mpOUMTHvT0uzzAQe0myQl2gL2OvsseF9qoUlTxFHC7JERx2lDT6ysvOgfv4rNR0wn3n5pe9HXsI7Ja00DiolpFp1" dmx-bind:line-items="datastore1.data[0].price" success-url="/BlogWriting" cancel-url="/BlogWriting"></dmx-stripe>
+<div class="container wappler-block pt-5 pb-5">
+  <div class="row align-items-center">
+    <div class="col-12 col-sm-6 col text-start">
+      <h4 class="hero-heading">Blog writing services</h4>
+      <p class="hero-desc-secondary-para">Whether you’re after SEO stardom or simply want to engage and inform your audience, Scribly’s blog writing services are key to a successful content strategy.</p>
+      <button class="btn btn-primary mb-4 blog-writing-hero-btn">Request a quote</button>
+    </div>
+    <div class="col-12 col-sm-6">
+      <img height="500" class="wappler-type-picture w-100" src="/assets/images/Blog-writing-1536x1536.png">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top" alt="Card image cap" src="/assets/images/Content-marketing-podcast-Tell-People-Stories-Not-Stats.png">
+        <div class="card-body">
+          <h4 class="card-title">SEO Content for 10 pages</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary" dmx-on:click="datastore1.upsert({},{price: 'price_1P4IMcSFH1mpOUMTa0cHPfF1'});stripe1.checkout()" id="seoproductbtn1">Buy now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top" alt="Card image cap" src="/assets/images/PODCAST-BLOG-IMAGES-1.png">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary" dmx-on:click="datastore1.upsert({},{price: 'price_1P4H2GSFH1mpOUMT4gqleq44'});stripe1.checkout()" id="seoproductbtn2">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

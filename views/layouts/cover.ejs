@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+
+<head>
+  <base href="/">
+  <script src="/dmxAppConnect/dmxAppConnect.js"></script>
+  <meta charset="UTF-8">
+  <title>Untitled Document</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/bootstrap/5/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/dmxAppConnect/dmxBootstrap5Navigation/dmxBootstrap5Navigation.js" defer></script>
+  <script src="/dmxAppConnect/dmxRouting/dmxRouting.js" defer></script>
+  <script src="/dmxAppConnect/dmxBootstrap5Collapse/dmxBootstrap5Collapse.js" defer></script>
+  <script src="/dmxAppConnect/dmxMasonry/dmxMasonry.js" defer></script>
+  <script src="https://js.stripe.com/v3/" defer></script>
+  <script src="/dmxAppConnect/dmxStripe/dmxStripe.js" defer></script>
+  <script src="/dmxAppConnect/dmxDatastore/dmxDatastore.js" defer></script>
+</head>
+
+<body is="dmx-app" id="cover">
+  <header class="">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-lg nav-bar-items" id="navbaritems">
+            <a class="navbar-brand ms-auto logo-wrapper" href="#"><img src="/assets/images/cropped-cropped-496268-logo-1588681568 (1).png" class="nav-brand-image"></a>
+
+            <div class="collapse navbar-collapse nav-bar-collapse-wrapper" id="navbar1_collapse">
+              <div class="navbar-nav nav-items-wrapper">
+                <a class="nav-item nav-link " href="/">Home</a>
+                <div class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="dropdown1" role="button" aria-haspopup="true" aria-expanded="false">Content Strategy</a>
+                  <div class="dropdown-menu dropdown-wrapper" aria-labelledby="dropdown1" dmx-style="">
+                    <a class="dropdown-item" href="/BlogStrategy">Blog Startegy</a>
+                    <a class="dropdown-item" href="#">Website Strategy</a>
+                    <a class="dropdown-item" href="#">Email Strategy</a>
+                    <a class="dropdown-item" href="#">Social Strategy</a>
+                    <a class="dropdown-item style6" href="/SeoStrategySample">SEO Strategy</a>
+                  </div>
+                </div>
+                <div class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="dropdown2" role="button" aria-haspopup="true" aria-expanded="false">Copywriting</a>
+                  <div class="dropdown-menu dropdown-wrapper" aria-labelledby="dropdown2">
+                    <a class="dropdown-item" href="/BlogWriting">Blog Writing</a>
+                    <a class="dropdown-item" href="#">Website Copy</a>
+                    <a class="dropdown-item" href="#">Email Copy and Newsletter</a>
+                    <a class="dropdown-item" href="#">Social Media Captions</a>
+                    <a class="dropdown-item" href="#">White Papers</a>
+                    <a class="dropdown-item" href="#">View All</a>
+                  </div>
+                </div>
+                <a class="nav-item nav-link" href="/AboutUs">About Us</a>
+                <div class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="dropdown3" role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
+                  <div class="dropdown-menu dropdown-wrapper" aria-labelledby="dropdown3">
+                    <a class="dropdown-item" href="/blog">Blog</a>
+                    <a class="dropdown-item" href="#">Case Studies</a>
+                    <a class="dropdown-item" href="#">Podcast</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button id="btn1" class="btn audit-free-button">Free Audit</button><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1_collapse" aria-controls="navbar1_collapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div is="dmx-view" id="content">
+      <%- await include(content, locals); %>
+    </div>
+  </main>
+  <main>
+    <div class="row footer-row-wrapper">
+      <div class="col">
+        <div class="row">
+          <div class="col">
+            <p class="footer-column-heading">Scribly Media</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="footer-sub-para">All rights reserved Scribly Media LLC
+            </p>
+            <p>
+            </p>
+            <p class="footer-sub-para-two">General Terms and Conditions<span style="color: var(--bs-body-color); font-family: var(--bs-body-font-family); font-size: var(--bs-body-font-size); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);" class="footer-span"><br></span></p>
+            <p class="footer-sub-para-two">Privacy policy</p>
+            <p class="footer-sub-para-two">Cookie policy</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="col">
+            <p class="footer-column-heading">Contact</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="footer-sub-para-two">Book a Call</p>
+            <p class="footer-sub-para-two">hello@scriblymedia.com</p>
+            <p class="footer-sub-para">NEWSLETTER SIGN UP</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col footer-sub-para">
+            <p>Sign up to our newsletter for weekly content marketing insights!
+            <p>
+            </p>
+            <p>If you sign up now, you'll get free exclusive access to our Ultimate Guide to Content Marketing Strategies.</p>
+            <form id="form1">
+              <input id="text1" name="text1" type="text" class="form-control style21" placeholder="Enter your Email">
+              <input id="text2" name="text2" type="text" class="form-control style20" placeholder="First Name">
+              <button id="btn2" class="btn subscribe-btn">Subscribe</button>
+            </form>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="col">
+            <p class="footer-column-heading">Site Map</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col footer-sub-para-two lastitems">
+            <p class="footer-content-items">Content Strategy
+            <p class="footer-content-items">SEO
+            </p>
+            <p class="footer-content-items">Blog
+            </p>
+            <p class="footer-content-items">Website
+            </p>
+            <p class="footer-content-items">Social Media
+            </p>
+            <p class="footer-content-items">Email
+            </p>
+            <p class="footer-content-items">B2B
+            </p>
+            <p class="footer-content-items">B2C &amp; Ecommerce
+            </p>
+            <p class="footer-content-items">Write For Scribly
+            </p>
+            <p>Contact Us</p>
+            <p>
+            </p>
+            </p>
+          </div>
+          <div class="col footer-sub-para-two">
+            <p class="footer-content-items">Copywriting Services
+            <p class="footer-content-items">Blogs
+            </p>
+            <p class="footer-content-items">Landing Pages
+            </p>
+            <p class="footer-content-items">SEO Content
+            </p>
+            <p class="footer-content-items">Web Copy
+            </p>
+            <p class="footer-content-items">Product Description
+            </p>
+            <p class="footer-content-items">Ebooks
+            </p>
+            <p class="footer-content-items">Social Media
+            </p>
+            <p class="footer-content-items">Emails
+            </p>
+            <p class="footer-content-items">Press Releases
+            </p>
+            <p class="footer-content-items">Copywriting
+            </p>
+            <p class="footer-content-items">Whitepapers
+            </p>
+            <p class="footer-content-items">Articles
+            </p>
+            <p>Proofreading &amp; Editing</p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="">
+    <div class="container footer-wrapper-container mw-100">
+      <div class="row mt-3 footer-main-row-wrapper">
+        <div class="col">
+          <p class="text-center">Privacy Policy • Terms of Service</p>
+          <p class="text-secondary text-center small mb-0 p-1">© 2024 Scribly Media LLC
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/bootstrap/5/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

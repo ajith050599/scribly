@@ -1,0 +1,26 @@
+{
+  "index.ejs": {
+    "layoutPage": "cover",
+    "description": ""
+  },
+  "BlogStrategy.ejs": {
+    "layoutPage": "cover",
+    "description": ""
+  },
+  "BlogWriting.ejs": {
+    "layoutPage": "cover",
+    "description": ""
+  },
+  "AboutUs.ejs": {
+    "layoutPage": "cover",
+    "description": ""
+  },
+  "blog.ejs": {
+    "layoutPage": "cover",
+    "description": ""
+  },
+  "SeoStrategySample.ejs": {
+    "layoutPage": "cover",
+    "description": ""
+  }
+}

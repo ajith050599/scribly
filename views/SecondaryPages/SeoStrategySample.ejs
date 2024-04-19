@@ -1,0 +1,56 @@
+<!-- Wappler include head-page="layouts/cover" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="SeoStrategy" appConnect="local" components="{dmxStripe:{},dmxDatastore:{}}" -->
+<dmx-stripe id="stripe2" key="pk_test_51P3vdjSFH1mpOUMTHvT0uzzAQe0myQl2gL2OvsseF9qoUlTxFHC7JERx2lDT6ysvOgfv4rNR0wn3n5pe9HXsI7Ja00DiolpFp1" dmx-bind:line-items="'price_1P4hEhSFH1mpOUMTXbVGDFJA'" success-url="/SeoStrategySample" cancel-url="/SeoStrategySample"></dmx-stripe>
+<dmx-datastore id="datastore1"></dmx-datastore>
+<dmx-stripe id="stripe1" dmx-bind:line-items="'price_1P4IMcSFH1mpOUMTa0cHPfF1'" key="pk_test_51P3vdjSFH1mpOUMTHvT0uzzAQe0myQl2gL2OvsseF9qoUlTxFHC7JERx2lDT6ysvOgfv4rNR0wn3n5pe9HXsI7Ja00DiolpFp1" success-url="/SeoStrategySample" cancel-url="/SeoStrategySample"></dmx-stripe>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p class="hero-heading">SEO content strategy</p>
+            <p class="hero-desc-secondary-para">Scribly can help you create an SEO content strategy that increases your online presence, helping you win positions in SERPs and drive traffic to your site.</p>
+            <button id="btn1" class="btn hero-button text-white">Book a free SEO content strategy consultation</button>
+            <p></p>
+        </div>
+        <div class="col">
+            <img src="/assets/images/Content-Strategy-from-Scribly.png" class="seo-hero-section-img">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h1>Price List of SEO optimised contents</h1>
+</div>
+<div class="container">
+    <div class="row product-row">
+        <div class="col product-desc">
+            <p class="product-heading">SEO Optimised webpage content</p>
+            <p>SEO based content for 10 web pages which will enhance your site seo.</p>
+            <p>Price: 15 $</p>
+            <button id="btn2" class="btn audit-free-button" dmx-on:click="stripe2.checkout()">BUY NOW</button>
+        </div>
+        <div class="col">
+            <img src="/assets/images/PODCAST-BLOG-IMAGES-3.png" class="product-img">
+        </div>
+    </div>
+    <div class="row product-row">
+        <div class="col product-desc">
+            <p class="product-heading">SEO Optimised webpage content(15 pages)</p>
+            <p>SEO based content for 15 web pages which will enhance your site seo.</p>
+            <p>Price: 20 $</p>
+            <button id="btn3" class="btn audit-free-button" dmx-on:click="stripe1.checkout()">BUY NOW</button>
+        </div>
+        <div class="col">
+            <img src="/assets/images/PODCAST-BLOG-IMAGES-1.png" class="product-img">
+        </div>
+    </div>
+    <div class="row product-row">
+        <div class="col product-desc">
+            <p class="product-heading">SEO Optimised webpage content(20 pages)</p>
+            <p>SEO based content for 15 web pages which will enhance your site seo.</p>
+            <p>Price: 25 $</p>
+            <button id="btn4" class="btn audit-free-button">BUY NOW</button>
+        </div>
+        <div class="col">
+            <img src="/assets/images/PODCAST-BLOG-IMAGES-2.png" class="product-img">
+        </div>
+    </div>
+</div>
+<meta name="ac:route" content="/SeoStrategySample">

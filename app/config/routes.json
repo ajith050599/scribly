@@ -1,0 +1,35 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "page": "index",
+      "routeType": "page",
+      "layout": "cover"
+    },
+    {
+      "path": "/BlogStrategy",
+      "page": "SecondaryPages/BlogStrategy",
+      "layout": "cover"
+    },
+    {
+      "path": "/BlogWriting",
+      "page": "SecondaryPages/BlogWriting",
+      "layout": "cover"
+    },
+    {
+      "path": "/AboutUs",
+      "page": "SecondaryPages/AboutUs",
+      "layout": "cover"
+    },
+    {
+      "path": "/blog",
+      "page": "SecondaryPages/blog",
+      "layout": "cover"
+    },
+    {
+      "path": "/SeoStrategySample",
+      "page": "SecondaryPages/SeoStrategySample",
+      "layout": "cover"
+    }
+  ]
+}
