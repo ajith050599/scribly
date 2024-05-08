@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "$_POST": [
+      {
+        "type": "object",
+        "name": "data",
+        "sub": [
+          {
+            "type": "object",
+            "ref": "stripe_checkout.session",
+            "name": "object"
+          }
+        ]
+      }
+    ]
+  },
+  "exec": {
+    "steps": [
+      {
+        "name": "checkout_status_message",
+        "module": "core",
+        "action": "setvalue",
+        "options": {
+          "value": "{{$_POST.data.object.customer_details.email}}"
+        },
+        "meta": [],
+        "outputType": "text",
+        "output": true
+      },
+      {
+        "name": "insert",
+        "module": "dbupdater",
+        "action": "insert",
+        "options": {
+          "connection": "scriblydb",
+          "sql": {
+            "type": "insert",
+            "values": [
+              {
+                "table": "customeremail",
+                "column": "customeremail",
+                "type": "text",
+                "value": "{{$_POST.data.object.customer_details.email}}"
+              }
+            ],
+            "table": "customeremail",
+            "returning": "id",
+            "query": "insert into `customeremail` (`customeremail`) values (?) returning `id`",
+            "params": [
+              {
+                "name": ":P1",
+                "type": "expression",
+                "value": "{{$_POST.data.object.customer_details.email}}",
+                "test": ""
+              }
+            ]
+          }
+        },
+        "meta": [
+          {
+            "name": "identity",
+            "type": "text"
+          },
+          {
+            "name": "affected",
+            "type": "number"
+          }
+        ]
+      }
+    ]
+  }
+}

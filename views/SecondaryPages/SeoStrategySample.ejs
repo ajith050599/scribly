@@ -1,12 +1,34 @@
-<!-- Wappler include head-page="layouts/cover" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="SeoStrategy" appConnect="local" components="{dmxStripe:{},dmxDatastore:{}}" -->
-<dmx-stripe id="stripe2" key="pk_test_51P3vdjSFH1mpOUMTHvT0uzzAQe0myQl2gL2OvsseF9qoUlTxFHC7JERx2lDT6ysvOgfv4rNR0wn3n5pe9HXsI7Ja00DiolpFp1" dmx-bind:line-items="'price_1P4hEhSFH1mpOUMTXbVGDFJA'" success-url="/SeoStrategySample" cancel-url="/SeoStrategySample"></dmx-stripe>
+<!-- Wappler include head-page="layouts/cover" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="SeoStrategy" appConnect="local" components="{dmxStripe:{},dmxDatastore:{},dmxBootstrap5Modal:{},dmxImageParallax:{}}" -->
+<dmx-datastore id="datastore2"></dmx-datastore>
+<div class="modal" id="modal1" is="dmx-bs5-modal" tabindex="-1" dmx-on:hide-bs-modal="datastore2.clear()">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" dmx-on:click="datastore1.clear();datastore2.clear()"></button>
+            </div>
+            <div class="modal-body ps-4 text-center">
+                <p class="modal-subheading">Confirm product checkout</p>
+                <p dmx-text="datastore2.data[0].productName">A nice paragraph</p>
+                <img dmx-bind:src="datastore2.data[0].image" class="h-50 w-75">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" dmx-on:click="datastore1.clear();datastore2.clear()">Cancel</button>
+                <button type="button" class="btn btn-primary" dmx-on:click="stripe4.checkout();datastore1.clear()">Confirm Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
 <dmx-datastore id="datastore1"></dmx-datastore>
-<dmx-stripe id="stripe1" dmx-bind:line-items="'price_1P4IMcSFH1mpOUMTa0cHPfF1'" key="pk_test_51P3vdjSFH1mpOUMTHvT0uzzAQe0myQl2gL2OvsseF9qoUlTxFHC7JERx2lDT6ysvOgfv4rNR0wn3n5pe9HXsI7Ja00DiolpFp1" success-url="/SeoStrategySample" cancel-url="/SeoStrategySample"></dmx-stripe>
+<dmx-serverconnect id="serverconnect1" url="/api/products/read"></dmx-serverconnect>
+
+<dmx-stripe id="stripe4" key="pk_test_51P3vdjSFH1mpOUMTHvT0uzzAQe0myQl2gL2OvsseF9qoUlTxFHC7JERx2lDT6ysvOgfv4rNR0wn3n5pe9HXsI7Ja00DiolpFp1" dmx-bind:line-items="datastore1.data[0].priceId" success-url="/Greetings" cancel-url="/SeoStrategySample" dmx-on:ready="datastore2.clear()"></dmx-stripe>
+
+
 <div class="container">
     <div class="row">
         <div class="col">
             <p class="hero-heading">SEO content strategy</p>
-            <p class="hero-desc-secondary-para">Scribly can help you create an SEO content strategy that increases your online presence, helping you win positions in SERPs and drive traffic to your site.</p>
+            <p class="hero-desc-secondary-para">Scribly can help you create an SEO content strategy that increases your online presence, helping you win positions in SERPs and drive traffic to your site.There’s no point in writing great content if no one is ever going to find it. Whether you’re enhancing existing content on your site or creating a fresh new blog, all copy should be carefully crafted to target a specific set of keywords that your audience is actively searching for and that are relevant to your business so that you appear higher in Google search results to help prospects find your site.&nbsp;</p>
             <button id="btn1" class="btn hero-button text-white">Book a free SEO content strategy consultation</button>
             <p></p>
         </div>
@@ -18,38 +40,19 @@
 <div class="container">
     <h1>Price List of SEO optimised contents</h1>
 </div>
-<div class="container">
-    <div class="row product-row">
-        <div class="col product-desc">
-            <p class="product-heading">SEO Optimised webpage content</p>
-            <p>SEO based content for 10 web pages which will enhance your site seo.</p>
-            <p>Price: 15 $</p>
-            <button id="btn2" class="btn audit-free-button" dmx-on:click="stripe2.checkout()">BUY NOW</button>
-        </div>
-        <div class="col">
-            <img src="/assets/images/PODCAST-BLOG-IMAGES-3.png" class="product-img">
-        </div>
-    </div>
-    <div class="row product-row">
-        <div class="col product-desc">
-            <p class="product-heading">SEO Optimised webpage content(15 pages)</p>
-            <p>SEO based content for 15 web pages which will enhance your site seo.</p>
-            <p>Price: 20 $</p>
-            <button id="btn3" class="btn audit-free-button" dmx-on:click="stripe1.checkout()">BUY NOW</button>
-        </div>
-        <div class="col">
-            <img src="/assets/images/PODCAST-BLOG-IMAGES-1.png" class="product-img">
-        </div>
-    </div>
-    <div class="row product-row">
-        <div class="col product-desc">
-            <p class="product-heading">SEO Optimised webpage content(20 pages)</p>
-            <p>SEO based content for 15 web pages which will enhance your site seo.</p>
-            <p>Price: 25 $</p>
-            <button id="btn4" class="btn audit-free-button">BUY NOW</button>
-        </div>
-        <div class="col">
-            <img src="/assets/images/PODCAST-BLOG-IMAGES-2.png" class="product-img">
+<div class="container product-container">
+    <div class="row row-cols-2" is="dmx-repeat" id="repeat1" dmx-bind:repeat="serverconnect1.data.query">
+        <div class="col product-card">
+            <div class="card">
+                <img class="card-img-top" alt="Card image cap" dmx-bind:src="image">
+                <div class="card-body">
+                    <h4 class="card-title" dmx-text="name">Card title</h4>
+                    <p class="card-text" dmx-text="">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text" dmx-text="description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text" dmx-text="'Price : $'+price">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary blog-card-button" dmx-text="'Buy Now'" dmx-on:click="datastore1.upsert({},{priceId: priceid, productName: name});modal1.show();datastore2.upsert({},{productName: name, image: image})">Go somewhere</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -27,12 +27,19 @@
   "projectLinksType": "site",
   "targets": [
     {
-      "name": "Development",
+      "targetType": "firebase",
+      "name": "wappler_intuitio_dev",
+      "firebaseProjectID": "mywoosah-qa",
+      "remoteURL": "https://mywoosah-qa.web.app"
+    },
+    {
+      "targetType": "wappler",
+      "name": "scribly_local",
       "remoteURL": "http://localhost:3000/",
-      "access": "local",
-      "targetType": "wappler"
+      "access": "local"
     }
   ],
-  "activeTarget": "Development",
-  "projectType": "web"
+  "activeTarget": "scribly_local",
+  "projectType": "web",
+  "extensions": []
 }

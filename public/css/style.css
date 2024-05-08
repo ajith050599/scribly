@@ -50,7 +50,7 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-            width: 75%;
+            width: 60%;
             color: #575760;
             font-size: 18px 
 }
@@ -908,4 +908,46 @@ img {
 .product-row {
     margin-top: 20px;
     margin-bottom: 40px 
+}
+.green-tick {
+    width: 25%;
+    height: 25% 
+}
+.success-message-payment {
+    margin-top: 50px;
+    margin-bottom: 40px 
+}
+.style22 {
+    color: #5cb85c 
+}
+.green-tick-wrapper {
+    width: 20%;
+    height: 20%;
+    margin-top: 50px 
+}
+.style23 {
+    margin-bottom: 60px 
+}
+.wappler-temp { 
+}
+.wappler-temp { 
+}
+.wappler-temp { 
+}
+.wappler-temp { 
+}
+.wappler-temp { 
+}
+.wappler-temp { 
+}
+.product-container {
+    margin-top: 40px 
+}
+.product-card {
+    margin-top: 20px;
+    margin-bottom: 20px 
+}
+.modal-subheading {
+    font-size: 20px;
+    font-weight: 600 
 }

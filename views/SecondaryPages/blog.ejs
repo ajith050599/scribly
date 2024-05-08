@@ -1,37 +1,24 @@
 <!-- Wappler include head-page="layouts/cover" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="blog" appconnect="local" class="style14" -->
+<dmx-serverconnect id="serverconnect1" url="/api/blogdetails/read"></dmx-serverconnect>
+
 <div class="container">
-    <p class="text-center blog-page-heading">Our Lates articles</p>
+    <p class="text-center blog-page-heading">Our Latest articles</p>
 </div>
-<div class="container style13">
-    <div class="row card-row-component">
+
+<div class="container">
+    <div class="row row-cols-2" is="dmx-repeat" id="repeat1" dmx-bind:repeat="serverconnect1.data.queryBlog">
         <div class="col">
-            <div class="card">
-                <img class="card-img-top" alt="Card image cap" src="/assets/images/A-closer-look-at-the-latest-Google-Core-Update.jpg">
+            <div class="card mb-4">
+                <img class="card-img-top" alt="Card image cap" dmx-bind:src="imageurl">
                 <div class="card-body">
-                    <h4 class="card-title">A closer look at the latest Google Core Update</h4>
-                    <p class="card-text">by Eleanore Nash</p>
-                    <p class="card-text">Google released a new Core Update on March 5th 2024 that has turned the digital world on its head. Predicted to have as big an impact as the famous panda and penguin updates, this latest Core Update is already taking victims. Some AI-generated websites and content are being completely deindexed and many sites are receiving ...</p>
-                    <a href="#" class="btn btn-primary blog-card-button">Read more</a>
-                    <p class="card-text"></p>
-                    <a href="#" class="card-link blog-card-link">
-                        &nbsp;SEO</a>
+                    <h4 class="card-title" dmx-text="name">Card title</h4>
+                    <p class="card-text" dmx-text="'by '+createdby">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text" dmx-text="description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary blog-card-button" dmx-text="'Read More'">Go somewhere</a>
+                    <p class="card-text mt-2" dmx-text="tag">With supporting text below as a natural lead-in to additional content.</p>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card">
-                <img class="card-img-top" alt="Card image cap" src="/assets/images/What-is-gated-content-and-does-it-work.jpg">
-                <div class="card-body">
-                    <h4 class="card-title">What is gated content and does it work?</h4>
-                    <p class="card-text">by Alex Long</p>
-                    <p class="card-text">We’re all trying to get our content noticed — that’s the whole point of content marketing after all! But that’s easier said than done. We know how hard it can be getting your work in front of people’s eyes these days, but there are some strategies you can use to help. We’ve already spoken about …</p>
-                    <a href="#" class="btn btn-primary blog-card-button">Read more</a>
-                    <p class="card-text"></p>
-                    <a href="#" class="card-link blog-card-link">&nbsp;Content Marketing</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-break w-100"></div>
     </div>
 </div>
 <meta name="ac:route" content="/blog">

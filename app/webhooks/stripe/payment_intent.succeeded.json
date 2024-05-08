@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "$_POST": [
+      {
+        "type": "object",
+        "name": "data",
+        "sub": [
+          {
+            "type": "object",
+            "ref": "stripe_payment_intent",
+            "name": "object"
+          }
+        ]
+      }
+    ]
+  },
+  "exec": {
+    "steps": {
+      "name": "payment_status",
+      "module": "core",
+      "action": "setvalue",
+      "options": {
+        "value": "{{$_POST.data.object.amount}}"
+      },
+      "meta": [],
+      "outputType": "text",
+      "output": true
+    }
+  }
+}

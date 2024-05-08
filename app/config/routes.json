@@ -30,6 +30,11 @@
       "path": "/SeoStrategySample",
       "page": "SecondaryPages/SeoStrategySample",
       "layout": "cover"
+    },
+    {
+      "path": "/Greetings",
+      "page": "SecondaryPages/Greetings",
+      "layout": "cover"
     }
   ]
 }

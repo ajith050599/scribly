@@ -1,0 +1,16 @@
+{
+  "name": "scriblydb",
+  "module": "dbconnector",
+  "action": "connect",
+  "options": {
+    "client": "sqlite3",
+    "connection": {
+      "filename": "/scriblydb.sqlite3"
+    },
+    "tz": "utc",
+    "meta": {}
+  },
+  "fileName": "scriblydb.json",
+  "actionFilePath": "file:///E:/wapplerSaampleApps/scribbly/app/modules/connections/scriblydb.json",
+  "serverType": "node"
+}

@@ -22,5 +22,9 @@
   "SeoStrategySample.ejs": {
     "layoutPage": "cover",
     "description": ""
+  },
+  "Greetings.ejs": {
+    "layoutPage": "cover",
+    "description": ""
   }
 }

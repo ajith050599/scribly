@@ -1,0 +1,7 @@
+{
+  "debug": false,
+  "secret": "nf50dYeW6QdH2AX",
+  "stripe": {
+    "secretKey": "sk_test_51P3vdjSFH1mpOUMT9bkCfZNlJcOFBIkKlW3bv0bU92vi2v1buAE0JT3U2u1XFCOcVy85CXmdRIIdnhVgpVVOyoY100jTOGZNfo"
+  }
+}
